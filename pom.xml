@@ -1,0 +1,15 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.bumph</groupId>
+  <artifactId>tomcat-cpu-valve</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.apache.tomcat</groupId>
+  		<artifactId>catalina</artifactId>
+  		<version>6.0.33</version>
+  	</dependency>
+  </dependencies>
+  <name>Tomcat CPU Limiter</name>
+  <description>Quick attempt at capturing how much CPU a tomcat request uses and killing the thread if it uses too much. This looks possible with a Valve and JMX. The thread is killed with the deprecated Thread.stop() which causes a ThreadDeath to occur. However it seems this is the best surefire way to kill a runaway thread.</description>
+</project>
